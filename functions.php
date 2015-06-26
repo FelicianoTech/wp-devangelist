@@ -1,9 +1,31 @@
 <?php
 /**
- * _s functions and definitions
+ * WP Devangelist functions and definitions
  *
  * @package wp-devangelist
  */
+
+/**
+ * Adds additional contact fields in the user profile.
+ * 
+ * This adds additional profile fields for:
+ *	- Twitter
+ *	- GitHub
+ *	- Google+
+ * 	- LinkedIn
+ * 	- Facebook
+ */
+function wp_devangelist_modify_contact_methods($profile_fields) {
+	
+	$profile_fields['twitter'] = "Twitter Username";
+	$profile_fields['github'] = "GitHub Username";
+	$profile_fields['gplus'] = "Google+ URL";
+	$profile_fields['linkedin'] = "LinkedIn URL";
+	$profile_fields['facebook'] = "Facebook URL";
+
+	return $profile_fields;
+}
+add_filter('user_contactmethods', 'wp_devangelist_modify_contact_methods');
 
 if ( ! function_exists( '_s_setup' ) ) :
 /**
