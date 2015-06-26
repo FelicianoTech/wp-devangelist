@@ -2,7 +2,7 @@
 /**
  * _s functions and definitions
  *
- * @package _s
+ * @package wp-devangelist
  */
 
 if ( ! function_exists( '_s_setup' ) ) :
