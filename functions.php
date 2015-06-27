@@ -5,6 +5,42 @@
  * @package wp-devangelist
  */
 
+
+/**
+ * Tell WordPress which customizations this theme offers.
+ */
+function wp_devangelist_customize_register( $wp_customize ) {
+	
+	$choices = array();
+	
+	$users = get_users( array( 'fields' => array(
+		'display_name',
+		'ID'
+	)));
+
+	foreach( $users as $user ) {
+		$choices[$user->ID] = $user->display_name;
+	}
+	
+	$wp_customize->add_section( "wp_devangelist_settings", array(
+		'title' => __("Settings", "wp-devangelist")
+	));
+
+	$wp_customize->add_setting( "wp_devangelist_showcased_user", array(
+		'default' => 1, # defaults to user ID 1
+		'type' => 'theme_mod'
+	));
+
+	$wp_customize->add_control( "wp_devangelist_showcased_user", array(
+		'choices' => $choices,
+		'label' => __("WordPress User", "wp-devangelist"),
+		'section' => 'wp_devangelist_settings',
+		'settings' => 'wp_devangelist_showcased_user',
+		'type' => 'select'
+	));
+}
+ add_action("customize_register", "wp_devangelist_customize_register");
+
 /**
  * Adds additional contact fields in the user profile.
  * 
@@ -111,7 +147,7 @@ function wp_devangelist_content_width() {
 	
 	$GLOBALS['content_width'] = apply_filters( "dev_evangelist_content_width", 640 );
 }
-add_action( "after_setup_theme", "dev_evangelist_content_width", 0 );
+add_action( "after_setup_theme", "wp_devangelist_content_width", 0 );
 
 /**
  * Register widget area.

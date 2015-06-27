@@ -522,10 +522,6 @@ a:active {
 ## Menus
 --------------------------------------------------------------*/
 .main-navigation {
-	clear: both;
-	display: block;
-	float: left;
-	width: 100%;
 }
 
 .main-navigation ul {
@@ -717,14 +713,44 @@ a:active {
 # Header
 --------------------------------------------------------------*/
 .site-header {
+	padding: 20px 20px 0;
 	background-color: #1C1C1C;
+	height: 100px;
 	color: #FFFFFF;
+	font-size: 1.1em;
 }
+	.site-branding {
+		float: left;
+	}
+		.site-header a, .site-header a:visited {
+			color: #FFFFFF;
+			text-decoration: none;
+		}
 
-.site-title a {
-	color: #FFFFFF;
-	text-decoration: none;
-}
+		.site-title {
+			float: left;
+			margin: 0;
+			font-size: 1.2em;
+		}
+		
+		.profile-data {
+			float: left;
+			margin-left: 20px;
+		}
+			.profile-data a {
+				margin-left: 7px;
+			}
+				.profile-data a:first-child {
+					margin-left: 0;
+				}
+
+	#site-navigation {
+		float: right;
+		font-size: 0.9em;
+	}
+		#site-navigation li {
+			padding: 0 5px;
+		}
 
 /*--------------------------------------------------------------
 # Widgets
