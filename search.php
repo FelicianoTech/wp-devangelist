@@ -2,7 +2,7 @@
 /**
  * The template for displaying search results pages.
  *
- * @package _s
+ * @package wp-devangelist
  */
 
 get_header(); ?>
@@ -25,7 +25,7 @@ get_header(); ?>
 				 * If you want to overload this in a child theme then include a file
 				 * called content-search.php and that will be used instead.
 				 */
-				get_template_part( 'template-parts/content', 'search' );
+				get_template_part( 'templates/content', 'search' );
 				?>
 
 			<?php endwhile; ?>
@@ -34,7 +34,7 @@ get_header(); ?>
 
 		<?php else : ?>
 
-			<?php get_template_part( 'template-parts/content', 'none' ); ?>
+			<?php get_template_part( 'templates/content', 'none' ); ?>
 
 		<?php endif; ?>
 

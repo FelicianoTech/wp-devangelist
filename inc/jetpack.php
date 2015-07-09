@@ -3,7 +3,7 @@
  * Jetpack Compatibility File
  * See: https://jetpack.me/
  *
- * @package _s
+ * @package wp-devangelist
  */
 
 /**
@@ -25,6 +25,6 @@ add_action( 'after_setup_theme', '_s_jetpack_setup' );
 function _s_infinite_scroll_render() {
 	while ( have_posts() ) {
 		the_post();
-		get_template_part( 'template-parts/content', get_post_format() );
+		get_template_part( 'templates/content', get_post_format() );
 	}
 } // end function _s_infinite_scroll_render

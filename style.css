@@ -4,7 +4,7 @@ Theme URI: http://FelicianoTech.com/
 Author: Ricardo N Feliciano
 Author URI: http://FelicianoTech.com/
 Description: This WordPress theme was designed to help showcase my projects, trips, and more while being a Developer Evangelist.
-Version: 0.0.1.0
+Version: 0.0.2.0
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Text Domain: wp-devangelist
@@ -39,6 +39,7 @@ Underscores is distributed under the terms of the GNU GPL v2 or later.
     ## Posts and pages
 	## Asides
 	## Comments
+# Footer
 # Infinite scroll
 # Media
 	## Captions
@@ -267,6 +268,10 @@ th {
 /*--------------------------------------------------------------
 # Typography
 --------------------------------------------------------------*/
+body {
+	font-family: "Noto Sans", sans-serif;
+}
+
 body,
 button,
 input,
@@ -714,8 +719,9 @@ a:active {
 --------------------------------------------------------------*/
 .site-header {
 	padding: 20px 20px 0;
-	background-color: #1C1C1C;
-	height: 100px;
+	/*background: #1C1C1C url("img/skyline.svg") 50% 120%/34% auto no-repeat;*/
+	background: #1C1C1C url("img/statue-of-liberty.svg") 50% 110%/auto 80% no-repeat;
+	height: 85px;
 	color: #FFFFFF;
 	font-size: 1.1em;
 }
@@ -794,7 +800,6 @@ a:active {
 }
 
 .page-content,
-.entry-content,
 .entry-summary {
 	margin: 1.5em 0 0;
 }
@@ -803,6 +808,70 @@ a:active {
 	clear: both;
 	margin: 0 0 1.5em;
 }
+
+article.post {
+	margin: 5em 5% 3em;
+}
+	article.post:first-child {
+		margin-top: 2em;
+	}
+
+	article.post header {
+		text-align: center;
+	}
+		article.post header a {
+			color: #000000;
+			text-decoration: none;
+			transition: color 2s;
+		}
+			article.post header a:hover {
+				color: #FF0000;
+				text-decoration: underline;
+			}
+	
+		article.post .entry-title {
+			margin: 0;
+			font-size: 2.5em;
+		}
+		
+		article.post div.wp-post-image-wrapper {
+			position: relative;
+			/*margin-bottom: 1em;*/
+			margin: 20px 10% 1em;
+			padding-bottom: 40%;
+			height: 0;
+			overflow: hidden;
+		}
+			article.post img.wp-post-image {
+				position: absolute;
+				top: 0;
+				right: 0;
+				bottom: 0;
+				left: 0;
+				margin: auto;
+				width: 100%;
+			}
+
+	article.post div.entry-content {
+		margin: 1em 10% 0;
+	}
+		article.post div.entry-content p:last-child {
+			margin-bottom: 0;
+		}
+
+	article.post .entry-footer {
+		margin: 0 10%;
+	}
+		article.post .entry-footer .tag-list .fa {
+			margin-right: 1.1em;
+		}
+			article.post .entry-footer .tag-list .fa:before {
+				padding-right: 0.3em;
+			}
+
+		article.post .entry-footer a.comment {
+			float: right;
+		}
 
 /*--------------------------------------------------------------
 ## Asides
@@ -836,6 +905,18 @@ a:active {
 .infinity-end.neverending .site-footer {
 	display: block;
 }
+
+/*--------------------------------------------------------------
+# Footer
+--------------------------------------------------------------*/
+#site-footer {
+	border-bottom: 18px solid #000000;
+	text-align: center;
+}
+	#site-footer .starbucks-cup {
+		height: 2.1em;
+		vertical-align: -10px;
+	}
 
 /*--------------------------------------------------------------
 # Media
