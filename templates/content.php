@@ -28,7 +28,7 @@
 				//wp_kses( __( 'Continue reading %s <span class="meta-nav">&rarr;</span>', '_s' ), array( 'span' => array( 'class' => array() ) ) ),
 				//the_title( '<span class="screen-reader-text">"', '"</span>', false )
 			//) );
-			the_content();
+			the_content("continue reading →");
 		?>
 
 		<?php

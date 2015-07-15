@@ -106,11 +106,11 @@ function wp_devangelist_posted_on(){
 
 	$posted_on = sprintf(
 		esc_html_x( 'Posted on %s', 'post date', '_s' ),
-		'<a href="' . esc_url( get_permalink() ) . '" rel="bookmark">' . $time_string . '</a>'
+		'<a href="'.esc_url( get_permalink()).'" rel="bookmark">'.$time_string.'</a>'
 	);
 
-	echo '<span class="posted-on">' . $posted_on . '</span>'; // WPCS: XSS OK.
-
+	echo '<span class="posted-on">'.$posted_on.'</span>';
+	edit_post_link('edit post', '<span class="fa fa-edit">', '</span>');
 }
 
 /**

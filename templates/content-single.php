@@ -2,18 +2,23 @@
 /**
  * Template part for displaying single posts.
  *
- * @package _s
+ * This is used when posts are displayed in a list. For example, the main blog
+ * page.
+ *
+ * @package wp-devangelist
  */
-
 ?>
-
-<article id="post-<?php the_ID(); ?>" <?php post_class(); ?> fake="true">
+<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 	<header class="entry-header">
 		<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
-
-		<div class="entry-meta">
-			<?php _s_posted_on(); ?>
-		</div><!-- .entry-meta -->
+		<?php if( "post" == get_post_type()): ?>
+			<div class="entry-meta"><?php wp_devangelist_posted_on(); ?></div>
+		<?php endif; ?>
+		<?php if( 1==0 ):/*has_post_thumbnail()):*/ ?>
+			<div class="wp-post-image-wrapper">
+				<?php the_post_thumbnail(); ?>
+			</div>
+		<?php endif; ?>
 	</header><!-- .entry-header -->
 
 	<div class="entry-content">
@@ -25,9 +30,6 @@
 			) );
 		?>
 	</div><!-- .entry-content -->
-
 	<footer class="entry-footer">
-		<?php _s_entry_footer(); ?>
 	</footer><!-- .entry-footer -->
 </article><!-- #post-## -->
-

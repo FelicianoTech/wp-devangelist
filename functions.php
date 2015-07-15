@@ -132,6 +132,11 @@ function wp_devangelist_setup() {
 		'default-color' => 'FFFFFF',
 		'default-image' => ''
 	)));
+
+	add_theme_support( "infinite-scroll", array(
+		'container' => 'main',
+		'footer' => 'site-footer',
+	));
 }
 endif; // wp_devangelist_setup
 add_action( "after_setup_theme", "wp_devangelist_setup" );

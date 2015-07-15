@@ -810,10 +810,13 @@ a:active {
 }
 
 article.post {
-	margin: 5em 5% 3em;
+	margin: 4em 5% 3em;
+	padding-top: 3em;
+	border-top: 1px dotted #DDDDDD;
 }
 	article.post:first-child {
 		margin-top: 2em;
+		border-top: none;
 	}
 
 	article.post header {
@@ -828,6 +831,10 @@ article.post {
 				color: #FF0000;
 				text-decoration: underline;
 			}
+
+		article.post .entry-header .fa-edit {
+			margin-left: 20px;
+		}
 	
 		article.post .entry-title {
 			margin: 0;
@@ -859,9 +866,36 @@ article.post {
 			margin-bottom: 0;
 		}
 
+		article.post .entry-content blockquote {
+			position: relative;
+			font-size: larger;
+			font-style: italic;
+		}
+			/*article.post .entry-content blockquote:before {
+				position: absolute;
+				top: -20px;
+				left: -20px;
+				content: "\201C";
+				font-size: 8em;
+			}*/
+			article.post .entry-content blockquote::first-letter {
+				font-size: 200%;
+			}
+
+		article.post div.entry-content .more-link {
+			color: #000000;
+			text-decoration: none;
+			font-weight: bold;
+		}
+
 	article.post .entry-footer {
 		margin: 0 10%;
 	}
+		article.post .entry-footer a {
+			color: #000000;
+			font-weight: bold;
+		}
+
 		article.post .entry-footer .tag-list .fa {
 			margin-right: 1.1em;
 		}
@@ -1006,4 +1040,15 @@ object {
 
 .gallery-caption {
 	display: block;
+}
+
+/**********************************************************
+***** Classes *****
+**********************************************************/
+.button {
+	display: inline-block;
+	border-radius: 0.3em;
+	border: 1px solid;
+	margin: 1em 0;
+	padding: 0.5em 0.75em;
 }

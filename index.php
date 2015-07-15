@@ -27,18 +27,11 @@ get_header(); ?>
 					 */
 					get_template_part( 'templates/content', get_post_format() );
 				?>
-
 			<?php endwhile; ?>
-
 			<?php the_posts_navigation(); ?>
-
 		<?php else : ?>
-
 			<?php get_template_part( 'templates/content', 'none' ); ?>
-
 		<?php endif; ?>
-
 		</main><!-- #main -->
 	</div><!-- #primary -->
-
 <?php get_footer(); ?>
