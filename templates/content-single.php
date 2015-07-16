@@ -14,7 +14,7 @@
 		<?php if( "post" == get_post_type()): ?>
 			<div class="entry-meta"><?php wp_devangelist_posted_on(); ?></div>
 		<?php endif; ?>
-		<?php if( 1==0 ):/*has_post_thumbnail()):*/ ?>
+		<?php if( has_post_thumbnail()): ?>
 			<div class="wp-post-image-wrapper">
 				<?php the_post_thumbnail(); ?>
 			</div>

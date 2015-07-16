@@ -755,7 +755,7 @@ a:active {
 		font-size: 0.9em;
 	}
 		#site-navigation li {
-			padding: 0 5px;
+			padding: 0 7px;
 		}
 
 /*--------------------------------------------------------------
@@ -907,6 +907,11 @@ article.post {
 			float: right;
 		}
 
+#comments {
+	margin: 3em 5% 2em;
+}
+
+
 /*--------------------------------------------------------------
 ## Asides
 --------------------------------------------------------------*/
@@ -1052,3 +1057,33 @@ object {
 	margin: 1em 0;
 	padding: 0.5em 0.75em;
 }
+
+/**********************************************************
+***** Homepage *****
+**********************************************************/
+html,
+body.home {
+	height: 100%;
+	overflow: hidden;
+}
+
+body.home {
+	background: linear-gradient(to bottom, rgb(0,0,0), rgba(0,0,0,0.0)) top/100% 15em no-repeat, #999999 url('img/blog-background-small.jpg') bottom/cover no-repeat;
+}
+	body.home header {
+		position: relative;
+		background: none;
+		line-height: 3em;
+	}
+
+	body.home #homepage-title {
+		position: absolute;
+		top: 50%;
+		margin: -1em auto 0;
+		width: 100%;
+		text-align: center;
+		color: #FFFFFF;
+		font-family: Parisienne, serif;
+		font-size: 5em;
+		font-weight: 100;
+	}
