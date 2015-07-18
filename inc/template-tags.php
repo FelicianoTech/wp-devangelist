@@ -110,7 +110,8 @@ function wp_devangelist_posted_on(){
 	);
 
 	echo '<span class="posted-on">'.$posted_on.'</span>';
-	edit_post_link('edit post', '<span class="fa fa-edit">', '</span>');
+	//edit_post_link('edit post', '<span class="fa fa-edit">', '</span>');
+	// disabling for now since the WP admin bar provides an edit link anyway
 }
 
 /**
