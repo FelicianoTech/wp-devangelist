@@ -9,8 +9,7 @@
  * @package wp-devangelist
  */
 
-$showcased_user = get_userdata( get_theme_mod( "wp_devangelist_showcased_user"
-));
+$showcased_user = get_userdata( get_theme_mod( "wp_devangelist_showcased_user"));
 
 $social_data = array(
 	'twitter' => array(
@@ -30,7 +29,7 @@ $social_data = array(
 		'url_pre' => ''
 	),
 	'facebook' => array(
-		'icon' => 'fa-facebok',
+		'icon' => 'fa-facebook',
 		'url_pre' => ''
 	)
 );

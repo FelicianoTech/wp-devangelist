@@ -4,7 +4,7 @@ Theme URI: http://FelicianoTech.com/
 Author: Ricardo N Feliciano
 Author URI: http://FelicianoTech.com/
 Description: This WordPress theme was designed to help showcase my projects, trips, and more while being a Developer Evangelist.
-Version: 0.0.4.0
+Version: 0.0.4.1
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Text Domain: wp-devangelist
@@ -737,6 +737,9 @@ a:active {
 			color: #FFFFFF;
 			text-decoration: none;
 		}
+			.site-header a:hover {
+				text-decoration: underline;
+			}
 
 		.site-title {
 			float: left;
@@ -954,7 +957,14 @@ article.post {
 # Footer
 --------------------------------------------------------------*/
 #site-footer {
+	position: fixed;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	border-top: 1px solid #DDDDDD;
 	border-bottom: 18px solid #000000;
+	background-color: #FFFFFF;
+	padding: 10px;
 	text-align: center;
 }
 	#site-footer .starbucks-cup {
