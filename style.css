@@ -915,8 +915,14 @@ article.post {
 			float: right;
 		}
 
+div.page {
+	margin: 0em 14% 3em;
+	padding-top: 3em;
+
+}
+
 #comments {
-	margin: 3em 5% 2em;
+	margin: 3em 14% 2em;
 }
 
 
@@ -964,7 +970,7 @@ article.post {
 	border-top: 1px solid #DDDDDD;
 	border-bottom: 18px solid #000000;
 	background-color: #FFFFFF;
-	padding: 10px;
+	padding: 6px 10%;
 	text-align: center;
 }
 	#site-footer .starbucks-cup {
