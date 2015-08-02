@@ -175,9 +175,15 @@ add_action( "widgets_init", "wp_devangelist_widgets_init" );
 /**
  * Enqueue scripts and styles.
  */
-function wp_devangelist_scripts() {
+function wp_devangelist_enqueue_scripts(){
 	
-	wp_enqueue_style( "wp_devangelist-style", get_stylesheet_uri() );
+	// register any stylesheets
+	wp_register_style( "mobile-stylesheet",
+	get_template_directory_uri()."/styles/mobile.css", "main-stylesheet",
+	false, "(max-width:1000px)");
+
+	wp_enqueue_style( "main-stylesheet", get_stylesheet_uri());
+	wp_enqueue_style( "mobile-stylesheet" );
 
 	wp_enqueue_script( "wp_devangelist-navigation",
 	get_template_directory_uri()."/js/navigation.js", array(), "20120206", true );
@@ -190,7 +196,7 @@ function wp_devangelist_scripts() {
 		wp_enqueue_script( "comment-reply" );
 	}
 }
-add_action( "wp_enqueue_scripts", "wp_devangelist_scripts" );
+add_action( "wp_enqueue_scripts", "wp_devangelist_enqueue_scripts" );
 
 /**
  * Implement the Custom Header feature.
