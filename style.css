@@ -4,7 +4,7 @@ Theme URI: http://FelicianoTech.com/
 Author: Ricardo N Feliciano
 Author URI: http://FelicianoTech.com/
 Description: This WordPress theme was designed to help showcase my projects, trips, and more while being a Developer Evangelist.
-Version: 0.0.4.1
+Version: 0.0.8.0
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Text Domain: wp-devangelist
@@ -277,6 +277,11 @@ body {
 	font-family: "Noto Sans", sans-serif;
 }
 
+figcaption {
+	color: #777777;
+	font-style: italic;
+}
+
 body,
 button,
 input,
@@ -286,15 +291,6 @@ textarea {
 	font-size: 16px;
 	font-size: 1rem;
 	line-height: 1.5;
-}
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-	clear: both;
 }
 
 p {
@@ -765,6 +761,13 @@ a:active {
 		#site-navigation li {
 			padding: 0 7px;
 		}
+			#site-navigation li.current-menu-item a {
+				font-weight: bold;
+			}
+
+		#site-navigation .sub-menu {
+			background-color: #1C1C1C;
+		}
 
 /*--------------------------------------------------------------
 # Widgets
@@ -833,10 +836,8 @@ article.post {
 		article.post header a {
 			color: #000000;
 			text-decoration: none;
-			transition: color 2s;
 		}
 			article.post header a:hover {
-				color: #FF0000;
 				text-decoration: underline;
 			}
 
@@ -876,16 +877,11 @@ article.post {
 
 		article.post .entry-content blockquote {
 			position: relative;
+			border-left: 3px solid #000000;
+			padding-left: 20px;
 			font-size: larger;
 			font-style: italic;
 		}
-			/*article.post .entry-content blockquote:before {
-				position: absolute;
-				top: -20px;
-				left: -20px;
-				content: "\201C";
-				font-size: 8em;
-			}*/
 			article.post .entry-content blockquote::first-letter {
 				font-size: 200%;
 			}
@@ -920,6 +916,24 @@ div.page {
 	padding-top: 3em;
 
 }
+	div.page blockquote {
+		position: relative;
+		border-left: 3px solid #000000;
+		padding-left: 20px;
+		font-size: larger;
+		font-style: italic;
+	}    
+		div.page blockquote::first-letter {                        
+			font-size: 200%;
+		}
+
+		div.page blockquote.ignore {
+			position: static;
+			border: 0;
+			padding: inherit;
+			font-size: normal;
+			font-style: normal;
+		}
 
 #comments {
 	margin: 3em 14% 2em;
@@ -1068,16 +1082,43 @@ object {
 	display: block;
 }
 
+
 /**********************************************************
-***** Classes *****
+***** Page Structure *****
+**********************************************************/
+body {
+	padding-bottom: 2.4em;
+}
+
+
+/**********************************************************
+***** Sitewide *****
 **********************************************************/
 .button {
 	display: inline-block;
-	border-radius: 0.3em;
 	border: 1px solid;
-	margin: 1em 0;
-	padding: 0.5em 0.75em;
+	border-radius: 10px;
+	margin: 2px;
+	padding: 0.5em 20px;
+	text-decoration: none;
 }
+
+.button-black, .button-black:active, .button-black:visited {
+	background: linear-gradient( #45484d, #111111);
+	color: #FFFFFF;
+}
+	.button-black:hover {
+		background: #111111;
+		color: #FFFFFF;
+	}
+
+header a, footer a {
+	transition: color 2s;
+}
+	header a:hover, footer a:hover {
+		color: #FF0000;
+	}
+
 
 /**********************************************************
 ***** Homepage *****
@@ -1102,7 +1143,7 @@ body.home {
 		width: 100%;
 		text-align: center;
 		color: #FFFFFF;
-		font-family: Parisienne, serif;
+		font-family: Parisienne, cursive, serif;
 		font-size: 5em;
 		font-weight: 100;
 	}
