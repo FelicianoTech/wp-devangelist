@@ -4,7 +4,7 @@ Theme URI: http://FelicianoTech.com/
 Author: Ricardo N Feliciano
 Author URI: http://FelicianoTech.com/
 Description: This WordPress theme was designed to help showcase my projects, trips, and more while being a Developer Evangelist.
-Version: 0.0.8.0
+Version: 1.0.0.0
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Text Domain: wp-devangelist
@@ -270,6 +270,37 @@ th {
 	padding: 0;
 }
 
+
+/**********************************************************
+***** Sitewide *****
+**********************************************************/
+.button {
+    display: inline-block;
+    border: 1px solid;
+    border-radius: 10px;
+    margin: 2px; 
+    padding: 0.5em 20px;
+    text-decoration: none;
+}
+
+.button-black, .button-black:active, .button-black:visited {
+    background: linear-gradient( #45484d, #111111);
+    color: #FFFFFF;
+}
+    .button-black:hover {
+        background: #111111;
+        color: #FFFFFF;
+    }    
+
+header a, footer a {
+    text-decoration: none;
+    transition: color 2s;
+}
+    header a:hover, footer a:hover {
+        color: #FF0000;
+        text-decoration: underline;
+    }
+
 /*--------------------------------------------------------------
 # Typography
 --------------------------------------------------------------*/
@@ -495,34 +526,6 @@ textarea {
 	width: 100%;
 }
 
-/*--------------------------------------------------------------
-# Navigation
---------------------------------------------------------------*/
-/*--------------------------------------------------------------
-## Links
---------------------------------------------------------------*/
-a {
-	color: royalblue;
-}
-
-a:visited {
-	color: purple;
-}
-
-a:hover,
-a:focus,
-a:active {
-	color: midnightblue;
-}
-
-a:focus {
-	outline: thin dotted;
-}
-
-a:hover,
-a:active {
-	outline: 0;
-}
 
 /*--------------------------------------------------------------
 ## Menus
@@ -559,22 +562,6 @@ a:active {
 
 .main-navigation ul ul a {
 	width: 200px;
-}
-
-.main-navigation ul ul li {
-
-}
-
-.main-navigation li:hover > a,
-.main-navigation li.focus > a {
-}
-
-.main-navigation ul ul :hover > a,
-.main-navigation ul ul .focus > a {
-}
-
-.main-navigation ul ul a:hover,
-.main-navigation ul ul a.focus {
 }
 
 .main-navigation ul li:hover > ul,
@@ -701,7 +688,6 @@ a:active {
 --------------------------------------------------------------*/
 .site-header {
 	padding: 20px 20px 0;
-	/*background: #1C1C1C url("img/skyline.svg") 50% 120%/34% auto no-repeat;*/
 	background: #1C1C1C url("img/statue-of-liberty.svg") 50% 110%/auto 80% no-repeat;
 	height: 85px;
 	color: #FFFFFF;
@@ -711,13 +697,9 @@ a:active {
 		float: left;
 		max-width: 45%;
 	}
-		.site-header a, .site-header a:visited {
+		.site-header a {
 			color: #FFFFFF;
-			text-decoration: none;
 		}
-			.site-header a:hover {
-				text-decoration: underline;
-			}
 
 		.site-title {
 			float: left;
@@ -817,11 +799,7 @@ article.post {
 	}
 		article.post header a {
 			color: #000000;
-			text-decoration: none;
 		}
-			article.post header a:hover {
-				text-decoration: underline;
-			}
 
 		article.post .entry-header .fa-edit {
 			margin-left: 20px;
@@ -968,6 +946,7 @@ div.page {
 	background-color: #FFFFFF;
 	padding: 6px 10%;
 	text-align: center;
+	font-weight: bold;
 }
 	#site-footer .starbucks-cup {
 		height: 2.1em;
@@ -1071,35 +1050,6 @@ object {
 body {
 	padding-bottom: 2.4em;
 }
-
-
-/**********************************************************
-***** Sitewide *****
-**********************************************************/
-.button {
-	display: inline-block;
-	border: 1px solid;
-	border-radius: 10px;
-	margin: 2px;
-	padding: 0.5em 20px;
-	text-decoration: none;
-}
-
-.button-black, .button-black:active, .button-black:visited {
-	background: linear-gradient( #45484d, #111111);
-	color: #FFFFFF;
-}
-	.button-black:hover {
-		background: #111111;
-		color: #FFFFFF;
-	}
-
-header a, footer a {
-	transition: color 2s;
-}
-	header a:hover, footer a:hover {
-		color: #FF0000;
-	}
 
 
 /**********************************************************
