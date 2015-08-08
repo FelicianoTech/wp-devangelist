@@ -895,7 +895,7 @@ div.page {
 			font-style: normal;
 		}
 
-#comments {
+#comments, #disqus_thread {
 	margin: 3em 14% 2em;
 }
 
