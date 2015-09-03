@@ -725,7 +725,8 @@ textarea {
 		#site-navigation li {
 			padding: 0 7px;
 		}
-			#site-navigation li.current-menu-item a {
+			#site-navigation li.current-menu-item a,
+			#site-navigation li.current_page_parent a {
 				font-weight: bold;
 			}
 
